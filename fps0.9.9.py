@@ -5,17 +5,17 @@ from ursina.shaders import lit_with_shadows_shader, unlit_shader
 import ursina.color as ucolor
 import random
 
-app = Ursina()   # ← これが最初！！
+app = Ursina()  
 window.size = (1920, 1080)
 window.fullscreen = True
 window.vsync = True
 application.target_fps = 60
 Text.default_font = 'Xirod.otf'
 Entity.default_shader = lit_with_shadows_shader
-ENEMY_DETECT_RADIUS = 18   # ← 追跡開始距離（m）
+ENEMY_DETECT_RADIUS = 18   # ← 追跡開始距離
 
 # =====================
-# 鍵システム
+# 鍵
 # =====================
 KEY_FRAGMENTS_NEEDED = 5
 key_fragments = 0
@@ -80,9 +80,6 @@ ENEMY_TURN_SPEED = 4
 # =====================
 # 効果音
 # =====================
-# =====================
-# 効果音（必ず spatial=False）
-# =====================
 gun_sound = Audio('gun', autoplay=False, spatial=False)
 hit_sound = Audio('hit', autoplay=False, spatial=False)
 death_sound = Audio('death', autoplay=False, spatial=False)
@@ -91,7 +88,7 @@ footstep_sound = Audio('footstep', autoplay=False, spatial=False)
 enemy_walls = []
 
 # =====================
-# マップ（表示用）
+# マップ
 # =====================
 map_entity = Entity(
     model='models/map',
@@ -101,7 +98,7 @@ map_entity = Entity(
 
 map_entity.collider = BoxCollider(
     map_entity,
-    center=Vec3(0, 7.8 + 5.5, 0),      # 元の中心 + 床の高さ
+    center=Vec3(0, 7.8 + 5.5, 0), 
     size=Vec3(110, 15.6, 95.5)
 )
 map_entity.collider.visible = True
@@ -534,17 +531,17 @@ enemy_walls.append(invisible_wall_35)
 visible = True
 
 # =====================
-# 手動スポーン位置（調整用）
+# 手動スポーン位置
 # =====================
 ENEMY_SPAWN_POINTS = [
-    Vec3(12, 6.0, -18),   # 今までの位置
+    Vec3(12, 6.0, -18),   
     Vec3(-7, 6.0, 5),
     Vec3(31, 6.0, 4),
 ]
 ENEMY_VERTICAL_ATTACK_LIMIT = 1.2
 
 # =====================
-# 設定メニュー + ぼかし
+# 設定メニュー
 # =====================
 settings_open = False
 
@@ -553,7 +550,6 @@ settings_ui = Entity(
     enabled=False
 )
 
-# 疑似ぼかし（暗い半透明）
 blur_overlay = Entity(
     parent=settings_ui,
     model='quad',
@@ -787,7 +783,7 @@ player_dot = Entity(
 )
 
 # =====================
-# ミニマップ：出口ドット
+# ミニマップ
 # =====================
 exit_dot = Entity(
     parent=minimap,   # ← 正解
@@ -798,7 +794,7 @@ exit_dot = Entity(
     enabled=True
 )
 # =====================
-# ミニマップ：鍵合成台ドット
+# ミニマップ：鍵合成台
 # =====================
 craft_dot = Entity(
     parent=minimap,
@@ -839,7 +835,7 @@ gun_sound = Audio(
     'gun',
     autoplay=False,
     spatial=False,
-    loop=True      # ← これ重要
+    loop=True     
 )
 
 ammo_text = Text(
@@ -927,7 +923,7 @@ class Enemy(Entity):
 
     if self.hp <= 0:
       self.dead = True
-      # 鍵の破片ドロップ（30%）
+      # 鍵の破片ドロップ
       if enemy_key_drops < MAX_ENEMY_KEY_DROPS and random.random() < 0.3:
         KeyFragment(self.world_position)
         enemy_key_drops += 1
@@ -957,7 +953,7 @@ class Enemy(Entity):
     dist = Vec2(to_player.x, to_player.z).length()
 
     # =====================
-    # 範囲外 → 何もしない
+    # 範囲外
     # =====================
     if dist > ENEMY_DETECT_RADIUS:
       self.rotation_z = 0
@@ -965,9 +961,6 @@ class Enemy(Entity):
       self.attack_timer -= time.dt
       return
 
-    # =====================
-    # 向く（滑らか）
-    # =====================
     target_y = math.degrees(math.atan2(to_player.x, to_player.z))
     self.rotation_y = lerp(
         self.rotation_y,
@@ -976,7 +969,7 @@ class Enemy(Entity):
     )
 
     # =====================
-    # 移動 or 攻撃
+    # 移動
     # =====================
     if dist > ENEMY_ATTACK_RANGE:
       move_amount = self.speed * time.dt
@@ -998,7 +991,7 @@ class Enemy(Entity):
       self.rotation_z = 0
       self.rotation_x = 0
 
-      # 高さチェック（プレイヤーが上にいる場合は攻撃しない）
+      # 高さチェック
       height_diff = player.y - self.y
       if height_diff > ENEMY_VERTICAL_ATTACK_LIMIT:
         return
@@ -1322,7 +1315,7 @@ def update_minimap():
     dot.position = (x, y)
 
   # =====================
-  # 出口（範囲内は距離反映 / 外は縁）
+  # 出口
   # =====================
   dx = exit_door.x - player.x
   dz = exit_door.z - player.z
@@ -1356,7 +1349,7 @@ def update_minimap():
   exit_dot.enabled = True
   exit_dot.position = (x, y)
   # =====================
-  # 鍵合成台（黄色ドット）
+  # 鍵合成台
   # =====================
   dx = craft_table.x - player.x
   dz = craft_table.z - player.z
