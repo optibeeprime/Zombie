@@ -22,11 +22,11 @@
 
 <strong>ゲーム画面</strong><br><br>
 
-<img src="images/img1.png" width="600"><br><br>
-<img src="images/img2.png" width="600"><br><br>
-<img src="images/img3.png" width="600"><br><br>
-<img src="images/img4.png" width="600"><br><br>
-<img src="images/img5.png" width="600">
+<img src="img1.png" width="600"><br><br>
+<img src="img2.png" width="600"><br><br>
+<img src="img3.png" width="600"><br><br>
+<img src="img4.png" width="600"><br><br>
+<img src="img5.png" width="600">
 
 <br><br>
 
