@@ -62,13 +62,12 @@
   穴の空いているところで、<br>
   数回「前進」＋「ジャンプ」を行うことで、上の階に登ることができます。
 </p>
-<iframe
-  src="https://drive.google.com/file/d/10a0kZOvvLH-n8N66avcUNYz640LHC-mi/preview"
-  width="600"
-  height="338"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
-</iframe>
+
+<p>
+  <a href="https://drive.google.com/file/d/10a0kZOvvLH-n8N66avcUNYz640LHC-mi/view">
+    <img src="img_up.png" alt="上の階に行く方法の動画" width="600">
+  </a>
+</p>
 
 
 <strong>ミニマップの表示</strong><br>
