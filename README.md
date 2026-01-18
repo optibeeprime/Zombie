@@ -62,6 +62,8 @@
   穴の空いているところで、<br>
   数回「前進」＋「ジャンプ」を行うことで、上の階に登ることができます。
 </p>
+<video src="zombieup.mp4" controls width="600">
+</video>
 
 <strong>ミニマップの表示</strong><br>
 ・🟡 黄色の点：合成台<br>
