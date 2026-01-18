@@ -1,4 +1,4 @@
-Zombie FPS 
+<title>Zombie FPS</title>
 <br><br>制作時期: 2025年12月～2026年1月<br>制作時間: 35時間
 
 ゲーム概要
