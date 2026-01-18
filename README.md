@@ -62,6 +62,13 @@
   穴の空いているところで、<br>
   数回「前進」＋「ジャンプ」を行うことで、上の階に登ることができます。
 </p>
+<br><strong>画像をクリックして動画を再生できます。</strong><br>
+<p>
+  <a href="https://drive.google.com/file/d/10a0kZOvvLH-n8N66avcUNYz640LHC-mi/view">
+    <img src="img_up.png" alt="上の階に行く方法の動画" width="600">
+  </a>
+</p>
+
 
 <strong>ミニマップの表示</strong><br>
 ・🟡 黄色の点：合成台<br>
