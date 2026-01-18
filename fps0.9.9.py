@@ -5,7 +5,7 @@ from ursina.shaders import lit_with_shadows_shader, unlit_shader
 import ursina.color as ucolor
 import random
 
-app = Ursina()  
+app = Ursina()
 window.size = (1920, 1080)
 window.fullscreen = True
 window.vsync = True
@@ -63,8 +63,8 @@ def collect_key_fragment(fragment):
 
 enemy_key_drops = 0
 MAX_ENEMY_KEY_DROPS = 3
-KeyFragment(Vec3(-15, 11, -14))
-KeyFragment(Vec3(-29, 11, -29))
+KeyFragment(Vec3(-13.6, 10.5, -14))
+KeyFragment(Vec3(-28.5, 11, -26))
 
 ZOMBIE_BODY = ucolor.rgb32(80, 95, 70)    # くすんだ緑
 ZOMBIE_HEAD = ucolor.rgb32(95, 110, 85)  # 少し明るい
@@ -98,7 +98,7 @@ map_entity = Entity(
 
 map_entity.collider = BoxCollider(
     map_entity,
-    center=Vec3(0, 7.8 + 5.5, 0), 
+    center=Vec3(0, 7.8 + 5.5, 0),
     size=Vec3(110, 15.6, 95.5)
 )
 map_entity.collider.visible = True
@@ -534,9 +534,10 @@ visible = True
 # 手動スポーン位置
 # =====================
 ENEMY_SPAWN_POINTS = [
-    Vec3(12, 6.0, -18),   
-    Vec3(-7, 6.0, 5),
-    Vec3(31, 6.0, 4),
+    Vec3(14, 6.0, -21.7),
+    Vec3(-9, 6.0, 2),
+    Vec3(33, 6.0, 5.8),
+    Vec3(-45, 10.0, -21),
 ]
 ENEMY_VERTICAL_ATTACK_LIMIT = 1.2
 
@@ -835,7 +836,7 @@ gun_sound = Audio(
     'gun',
     autoplay=False,
     spatial=False,
-    loop=True     
+    loop=True
 )
 
 ammo_text = Text(
