@@ -72,7 +72,10 @@
 <strong>操作方法</strong><br><br>
 
 W / A / S / D ：移動<br>
+左クリック ：射撃<br>
+右クリック ：ADS<br>
 Space ：ジャンプ<br>
+R ：リロード<br>
 E ：合成台で鍵を合成<br>
 Z ：スタック時用リスポーン<br>
 F ：死亡時リスポーン
