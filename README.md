@@ -20,6 +20,16 @@
 
 <br><br>
 
+<strong>ゲーム画面</strong><br><br>
+
+<img src="images/img1.png" width="600"><br><br>
+<img src="images/img2.png" width="600"><br><br>
+<img src="images/img3.png" width="600"><br><br>
+<img src="images/img4.png" width="600"><br><br>
+<img src="images/img5.png" width="600">
+
+<br><br>
+
 <strong>ゲームの流れ</strong><br><br>
 
 <strong>1．FPS視点で探索</strong><br>
@@ -50,10 +60,6 @@
 <strong>ミニマップの表示</strong><br>
 ・🟡 黄色の点：合成台<br>
 ・🟢 緑の点：出口
-
-<br><br>
-
-ミニマップを頼りに目的地を確認しながら進みましょう。
 
 <br><br>
 
