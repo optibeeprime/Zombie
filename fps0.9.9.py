@@ -10,7 +10,7 @@ window.size = (1920, 1080)
 window.fullscreen = True
 window.vsync = True
 application.target_fps = 60
-Text.default_font = 'Xirod.otf'
+Text.default_font = 'assets/Xirod.otf'
 Entity.default_shader = lit_with_shadows_shader
 ENEMY_DETECT_RADIUS = 18   # ← 追跡開始距離
 
@@ -81,7 +81,7 @@ ENEMY_TURN_SPEED = 4
 # 効果音
 # =====================
 gun_sound = Audio('gun', autoplay=False, spatial=False)
-hit_sound = Audio('hit', autoplay=False, spatial=False)
+# hit_sound = Audio('hit', autoplay=False, spatial=False)
 death_sound = Audio('death', autoplay=False, spatial=False)
 footstep_sound = Audio('footstep', autoplay=False, spatial=False)
 
@@ -650,7 +650,7 @@ Button(
 gun_sound_playing = False
 
 gun_sound.volume = 0.8
-hit_sound.volume = 0.9
+# hit_sound.volume = 0.9
 death_sound.volume = 1.0
 footstep_sound.volume = 0.4
 
@@ -1006,7 +1006,7 @@ class Enemy(Entity):
   def attack_player(self):
     if player.hp <= 0:
       return
-    hit_sound.play()
+    # hit_sound.play()
 
     player.hp -= ENEMY_ATTACK_DAMAGE
     player.hp = max(player.hp, 0)
